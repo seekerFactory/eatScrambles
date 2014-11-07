@@ -1,0 +1,27 @@
+
+changed to tool directory and ran python3 shell
+
+
+
+python3
+>>> import argparse, random
+>>> from tests import tested, testTopNMatches
+>>> from data import *
+>>> from recomends import RModel as RM
+>>> rmnd=RM()
+>>> critics=movie_critics
+>>> critics
+{'Alok': {'Maachis': 4.5, 'Singing in the Rain': 4.0, 'The Bridge on River Kwai': 1.0}, 'Rajkumar': {'Saaheb': 2.0, 'Singing in the Rain': 3.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 2.0, 'Maachis': 4.0}, 'Salma Agha': {'Saaheb': 3.0, 'Maachis': 3.5, 'The Shootist': 4.5, 'Singing in the Rain': 4.0, 'The Bridge on River Kwai': 2.5}, 'Waheeda Rehman': {'Saaheb': 3.0, 'Singing in the Rain': 3.5, 'The Shootist': 3.0, 'Saagar': 2.5, 'The Bridge on River Kwai': 2.5, 'Maachis': 3.5}, 'Miki Firangi': {'Singing in the Rain': 5.0, 'Maachis': 4.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 3.5}, 'Nutan': {'Saaheb': 1.5, 'Singing in the Rain': 5.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 3.5, 'Maachis': 3.5}, 'Puneet Issar': {'Singing in the Rain': 3.5, 'Maachis': 3.0, 'The Shootist': 4.0, 'Saagar': 2.5}}
+>>>
+>>> rmnd.getRecommendations(critics, 'Alok')
+[(3.3477895267131013, 'The Shootist'), (2.8325499182641614, 'Saagar'), (2.5309807037655645, 'Saaheb')]
+>>> movies=rmnd.transformPrefs(critics)
+>>> movies
+{'Saaheb': {'Waheeda Rehman': 3.0, 'Nutan': 1.5, 'Rajkumar': 2.0, 'Salma Agha': 3.0}, 'Maachis': {'Alok': 4.5, 'Rajkumar': 4.0, 'Salma Agha': 3.5, 'Waheeda Rehman': 3.5, 'Nutan': 3.5, 'Miki Firangi': 4.0, 'Puneet Issar': 3.0}, 'The Shootist': {'Rajkumar': 3.0, 'Salma Agha': 4.5, 'Waheeda Rehman': 3.0, 'Miki Firangi': 3.0, 'Nutan': 3.0, 'Puneet Issar': 4.0}, 'Saagar': {'Waheeda Rehman': 2.5, 'Nutan': 3.0, 'Miki Firangi': 3.0, 'Rajkumar': 3.0, 'Puneet Issar': 2.5}, 'The Bridge on River Kwai': {'Alok': 1.0, 'Rajkumar': 2.0, 'Salma Agha': 2.5, 'Waheeda Rehman': 2.5, 'Nutan': 3.5, 'Miki Firangi': 3.5}, 'Singing in the Rain': {'Alok': 4.0, 'Rajkumar': 3.0, 'Salma Agha': 4.0, 'Waheeda Rehman': 3.5, 'Nutan': 5.0, 'Miki Firangi': 5.0, 'Puneet Issar': 3.5}}
+>>>
+>>>
+>>> rmnd.topMatches(movies, 'Maachis')
+[(0.7637626158259785, 'Saagar'), (0.11180339887498941, 'Singing in the Rain'), (-0.3333333333333333, 'Saaheb'), (-0.5663521139548527, 'The Shootist'), (-0.6454972243679047, 'The Bridge on River Kwai')]
+>>> rmnd.getRecommendations(movies, 'Saagar')
+[(3.610031066802183, 'Alok'), (3.44362:41497684494, 'Salma Agha')]
+>>>
