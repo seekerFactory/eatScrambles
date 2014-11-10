@@ -1,4 +1,4 @@
-For running the script open terminal and change directory to foleder "RankingRecommendations"
+For running the script open terminal and change directory to folder "RankingRecommendations"
 If folder is inside directory Home->App->eatScrambles
 
 	In Linux or Mac:	
@@ -97,7 +97,8 @@ Assign it to critics variable
 {'Alok': {'Maachis': 4.5, 'Singing in the Rain': 4.0, 'The Bridge on River Kwai': 1.0}, 'Rajkumar': {'Saaheb': 2.0, 'Singing in the Rain': 3.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 2.0, 'Maachis': 4.0}, 'Salma Agha': {'Saaheb': 3.0, 'Maachis': 3.5, 'The Shootist': 4.5, 'Singing in the Rain': 4.0, 'The Bridge on River Kwai': 2.5}, 'Waheeda Rehman': {'Saaheb': 3.0, 'Singing in the Rain': 3.5, 'The Shootist': 3.0, 'Saagar': 2.5, 'The Bridge on River Kwai': 2.5, 'Maachis': 3.5}, 'Miki Firangi': {'Singing in the Rain': 5.0, 'Maachis': 4.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 3.5}, 'Nutan': {'Saaheb': 1.5, 'Singing in the Rain': 5.0, 'The Shootist': 3.0, 'Saagar': 3.0, 'The Bridge on River Kwai': 3.5, 'Maachis': 3.5}, 'Puneet Issar': {'Singing in the Rain': 3.5, 'Maachis': 3.0, 'The Shootist': 4.0, 'Saagar': 2.5}}
 
 
-Whats recommended for critic 'Alok', score is weighted average
+Whats recommended for critic 'Alok', score is weighted average. Also recommended movies Alok is yet to see.
+
 >>>
 >>> rmnd.getRecommendations(critics, 'Alok')
 [(3.3477895267131013, 'The Shootist'), (2.8325499182641614, 'Saagar'), (2.5309807037655645, 'Saaheb')]
