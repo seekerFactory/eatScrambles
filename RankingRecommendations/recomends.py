@@ -62,7 +62,6 @@ class RModel:
 
 	# Gets recommendations for a person by using a weighted average
 	# of every other user's rankings
-#	def getRecommendations(self, prefs, person, similarity=RModel.sim_pearson):
 	def getRecommendations(self, prefs, person):
 		totals={}
 		simSums={}

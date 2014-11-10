@@ -3,6 +3,6 @@
 
 
 ## create data in form
-## critics = {'Name1' : {'Item1': score, 'Item2': score}, 'Name2':{'Item1':score, 'Item2': score}}
+## localcritics = {'Name1' : {'Item1': score, 'Item2': score}, 'Name2':{'Item1':score, 'Item2': score}}
 ##
 
